@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script type='text/javascript'>
+            function getText()
+            {
+                return document.getElementById('txtinput').value;
+            }
+            function locationChange()
+            {
+                window.location = 'ios:webToNativeCall';
+            }
+            function displayJsAlert()
+            {
+                window.alert("You pressed my button!\n");
+            }
+        </script>
+        
+        <p id="confirm"></p>
+        <script>
+            function displayJsConfirm() {
+                var x;
+                if (window.confirm("Press a button!") == true) {
+                    x = "You pressed OK!\n";
+                } else {
+                    x = "You pressed Cancel!\n";
+                }
+                //document.getElementById("confirm").innerHTML = x;
+                return x;
+            }
+        </script>
+
+    </head>
+    <body style='overflow-x:hidden;overflow-y:hidden;'>
+        <br/><br/><br/><br/>
+        <h2 style = "font-size:16px;" align='center' >Hi Welcome to Webpage</h2>
+        <br/>
+        <p align='center' style = "font-size:12px;"> Please Click the button after entering the text</p>
+        <br/>
+        <center>
+            <input type='text' style='width:90px;height:30px;' id='txtinput'/>
+        </center>
+        <br/>
+        <center>
+            <input type='button' style='width:90px;height:30px;' onclick='locationChange()' value='click me'>
+        </center>
+    </body>
+</html>
